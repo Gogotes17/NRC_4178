@@ -1,0 +1,86 @@
+/* -------------------- FOOTER -------------------- */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 2rem 1rem;
+  font-family: "Roboto", sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 75 rem;
+  margin: auto;
+  gap: 2rem;
+}
+.footer-brand {
+  flex: 1;
+  min-width: 12.5 rem;
+}
+.footer-logo {
+  width: 3.75 rem;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+.footer-links,
+.footer-social {
+  flex: 1;
+  min-width: 12.5 rem;
+}
+.footer-links a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 0.3rem 0;
+}
+.footer-links a:hover {
+  color: #fff;
+}
+.social-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 48 rem) {
+  .menu-toggle {
+    display: block;
+  }
+  .menu-horizontal {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+  }
+  .menu-horizontal.active {
+    display: flex;
+  }
+  .menu-horizontal li {
+    border-bottom: 0.063 rem solid #ccc;
+  }
+  .historia-contenido,
+  .proposito-contenido,
+  .contacto-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+  .historia-imagen img,
+  .proposito-video iframe {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

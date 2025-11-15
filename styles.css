@@ -1,0 +1,182 @@
+/* -------------------- GLOBAL RESET -------------------- */
+body {
+  margin: 0;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* -------------------- TOP NAVIGATION -------------------- */
+.top-header {
+  position: fixed;
+  background-color: #7eaefc;
+  width: 98%;
+  z-index: 100;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.logo img {
+  height: 3rem;
+  width: auto;
+}
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.menu-horizontal {
+  list-style: none;
+  display: flex;
+  justify: center;
+  flex: 2;
+  margin: 0;
+  padding: 0;
+}
+.menu-horizontal li a {
+  display: block;
+  padding: 1rem 1.25rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.menu-horizontal li a:hover {
+  color: brown;
+}
+.menu-vertical {
+  display: none;
+  position: absolute;
+  background-color: burlywood;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 12rem;
+}
+.menu-horizontal li:hover .menu-vertical {
+  display: block;
+}
+.menu-vertical li a {
+  display: block;
+  color: black;
+  padding: 1rem;
+  text-decoration: none;
+}
+.menu-vertical li a:hover {
+  background-color: #eee;
+}
+
+/* -------------------- SECCIÓN HISTORIA -------------------- */
+.historia,
+.proposito {
+  padding: 6rem 2rem 3rem 2rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+.historia h2,
+.proposito h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+}
+.historia-contenido,
+.proposito-contenido {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+.historia-imagen,
+.proposito-video {
+  flex: 1;
+}
+.historia-imagen img,
+.proposito-video iframe {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.proposito-video iframe {
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+.historia-texto,
+.proposito-texto {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.historia-texto p + p,
+.proposito-texto p + p {
+  margin-top: 1rem;
+}
+
+/* -------------------- SECCIÓN CONTACTO -------------------- */
+.contacto {
+  padding: 6rem 2rem 3rem 2rem;
+  background-color: #f1f1f1;
+  color: #333;
+}
+.contacto h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+}
+.contacto-contenido {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: flex-start;
+}
+.formulario-contacto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+input,
+select,
+textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+.checkboxes label,
+.radios label {
+  margin-right: 1rem;
+}
+button[type="submit"] {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #0051ba;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #003e91;
+}
+.contacto-instrucciones {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.mensaje-enviado {
+  margin-top: 1.5rem;
+  color: green;
+  font-weight: bold;
+}

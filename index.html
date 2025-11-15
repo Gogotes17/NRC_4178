@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmacia IHC-TM</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+
+  <body>
+    <header class="top-header">
+      <div class="logo"><img src="IMAGENES/farmacia.png" alt="Logo Farmacia" /></div>
+      <button class="menu-toggle">☰</button>
+      <ul class="menu-horizontal">
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#proposito">Propósito</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li>
+          <a href="#">Más</a>
+          <ul class="menu-vertical">
+            <li><a href="#registro">Registrar Producto</a></li>
+            <li><a href="#politicas">Políticas</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+
+    <section id="historia" class="historia">
+      <h2>Nuestra Historia</h2>
+      <div class="historia-contenido">
+        <div class="historia-imagen">
+          <img src="IMAGENES/fondo-de-comercio-farmacia-scaled.jpg" alt="Historia de la Farmacia" />
+        </div>
+        <div class="historia-texto">
+          <p>
+            Bienvenidos al inicio de una pequeña farmacia, comprometidos con  con el sueño de
+            cuidar la salud de nuestra comunidad.
+          </p>
+          <p>
+            Desde nuestros inicios, la botica nació con el compromiso de brindar salud y bienestar
+             a nuestra comunidad. Fundada por una familia apasionada por la medicina y el servicio, 
+             abrimos nuestras puertas con la convicción de que una atención cercana, honesta y profesional 
+             puede marcar la diferencia en la vida de las personas. A lo largo de los años, hemos crecido 
+             junto a nuestros vecinos, adaptándonos a sus necesidades y fortaleciendo la confianza que nos 
+             une. Hoy, más que una botica, somos un espacio donde cada consulta, cada sonrisa y cada recomendación cuenta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proposito" class="proposito">
+      <h2>Nuestro Propósito</h2>
+      <div class="proposito-contenido">
+        <div class="proposito-texto">
+          <p>
+            Nos esforzamos por ofrecer una experiencia de usuario accesible,
+            intuitiva y eficiente en nuestra plataforma de salud.
+          </p>
+          <p>
+            En nuestra botica, creemos que la salud no solo se trata de medicamentos, sino de cuidado, orientación y compromiso 
+            genuino con cada persona que entra por nuestra puerta. Nuestro propósito es ser un aliado cercano en el bienestar 
+            de nuestros pacientes, brindando no solo productos de calidad, sino también información clara, atención personalizada 
+            y un servicio humano que inspire confianza. Trabajamos cada día para que nuestras acciones contribuyan a una vida más saludable, 
+            digna y tranquila para todos.
+          </p>
+        </div>
+        <div class="proposito-video">
+          <iframe
+		  src="https://www.youtube.com/embed/YZINyBF-aGI"
+		  title="Propósito del curso"
+		  allowfullscreen
+		  loading="lazy"
+		></iframe>
+		
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Contáctanos</h2>
+      <div class="contacto-contenido">
+        <form name="frm" id="formularioContacto" class="formulario-contacto">
+          <div class="form-grupo">
+            <label for="nombres">Nombres:</label>
+            <input type="text" name="nombres" id="nombres"  />
+          </div>
+          <div class="form-grupo">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos"  />
+          </div>
+          <div class="form-grupo">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" id="email"  />
+          </div>
+          <div class="form-grupo">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" name="telefono" id="telefono" maxlength="9" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+          </div>
+          <button type="submit">Enviar</button>
+          <div
+            id="mensajeEnviado"
+            class="mensaje-enviado"
+            style="display: none"
+          >
+            ¡Mensaje enviado correctamente!
+          </div>
+        </form>
+        <div class="contacto-instrucciones">
+          <p>Completa el formulario para comunicarte con nosotros.</p>
+          <p>Responderemos a la brevedad con toda la información necesaria.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="registro" class="contacto">
+      <h2>Registro de Producto</h2>
+      <form id="medForm" class="formulario-contacto">
+        <div class="form-grupo">
+          <label for="medicamento">Nombre del medicamento:</label>
+          <input type="text" id="medicamento" required />
+        </div>
+        <div class="form-grupo">
+          <label for="categoria">Categoría:</label>
+          <input type="text" id="categoria" required />
+        </div>
+        <div class="form-grupo">
+          <label for="stock">Stock disponible:</label>
+          <input type="number" id="stock" required />
+        </div>
+        <button type="submit">Registrar</button>
+      </form>
+      <ul id="listaMedicamentos"></ul>
+    </section>
+
+    <section id="politicas" class="contacto">
+      <h2>Políticas de Privacidad</h2>
+      <p>
+        Aseguramos la confidencialidad de tu información y el cumplimiento de
+        normas legales.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="IMAGENES/farmacia.png" alt="Logo" class="footer-logo" />
+          <p>FarmaSalud</p>
+        </div>
+        <!-- Enlaces legales -->
+        <div class="footer-links">
+         <h4>Legal</h4>
+           <a href="pdf/Política y Privacidad.pdf">Política de Privacidad</a>
+            <!-- Dentro de href llama a un documento pdf con la poltica-->
+            <a href="pdf/Términos y Condiciones.pdf">Términos y Condiciones</a>
+               <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+            <a href="pdf/LeyDeProteccionDeDatos.pdf">Protección de Datos</a>
+        </div>
+
+        <div class="footer-social">
+			<h4>Síguenos</h4>
+			<a href="#"><img src="IMAGENES/facebook (1).png" alt="Facebook" class="social-icon" /></a>
+			<a href="#"><img src="IMAGENES/instagram.png" alt="Instagram" class="social-icon" /></a>
+			<a href="#"><img src="IMAGENES/Twiter.png" alt="Twitter" class="social-icon" /></a>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
